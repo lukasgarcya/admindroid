@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdminDroid.iml" filepath="$PROJECT_DIR$/AdminDroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admindroid.iml" filepath="$PROJECT_DIR$/admindroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admindroidcompiler/admindroidcompiler.iml" filepath="$PROJECT_DIR$/admindroidcompiler/admindroidcompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admindroidlib/admindroidlib.iml" filepath="$PROJECT_DIR$/admindroidlib/admindroidlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admindroidresource/admindroidresource.iml" filepath="$PROJECT_DIR$/admindroidresource/admindroidresource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

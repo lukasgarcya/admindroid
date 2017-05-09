@@ -1,0 +1,22 @@
+package ${package};
+
+import com.google.firebase.database.DatabaseReference;
+
+public class ${class}Presenter implements ${class}MVP.Presenter{
+
+    private ${class}MVP.View view;
+
+    public ${class}Presenter(${class}MVP.View view){
+        this.view = view;
+    }
+
+    public void onAdd${class}ButtonClicked(){
+
+    }
+    public void load${class}All(){
+
+    }
+    public void onLoad${class}s(DatabaseReference databaseReference){
+        this.view.setAdapter(new ${class}FirebaseRecyclerAdapter(${class}.class, ${item_layout}, ${class}Holder.class, databaseReference.child("${path}")));
+    }
+}

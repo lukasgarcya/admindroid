@@ -1,0 +1,59 @@
+package ${package};
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import ${import_layout};
+
+import android.support.v7.widget.RecyclerView;
+
+public class ${class}Activity extends AppCompatActivity implements ${class}MVP.View{
+    #if (${toolbar})
+    private Toolbar toolbar;
+    #end
+    private RecyclerView recyclerView;
+    private ${class}MVP.Presenter presenter;
+
+	protected void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+        setContentView(${layout});
+        #if (${toolbar})
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        #if (${title})
+        getSupportActionBar().setTitle("${title}");
+        #end
+        #end
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        presenter = new ${class}Presenter(this);
+        presenter.load${class}All();
+    }
+
+    public void showToast(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
+
+    public void showAlert(String msg){
+        Snackbar.make(findViewById(${layout}), msg, Snackbar.LENGTH_LONG).show();
+    }
+
+    public void showAdd${class}Form(){
+        // Usar fragment
+    }
+
+    public void setAdapter(FirebaseRecyclerAdapter adapter){
+        this.recyclerView.setAdapter(adapter);
+    }
+
+    public Context getContext(){
+        return this;
+    }
+}

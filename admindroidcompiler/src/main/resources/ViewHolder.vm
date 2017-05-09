@@ -1,0 +1,10 @@
+package ${package};
+
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
+public class ${class}Holder extends RecyclerView.ViewHolder {
+    public ${class}Holder(View itemView){
+        super(itemView);
+    }
+}

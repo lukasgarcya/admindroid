@@ -1,0 +1,26 @@
+package ${package};
+
+import android.content.Context;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DatabaseReference;
+
+public interface ${class}MVP{
+    interface View{
+        void showToast(String msg);
+        void showAlert(String msg);
+        void showAdd${class}Form();
+        void setAdapter(FirebaseRecyclerAdapter adapter);
+        Context getContext();
+    }
+
+    interface Presenter {
+        void onAdd${class}ButtonClicked();
+        void load${class}All();
+        void onLoad${class}s(DatabaseReference databaseReference);
+    }
+
+    interface Model {
+        void get${class}All();
+    }
+}
